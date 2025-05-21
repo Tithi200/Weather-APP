@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+body.dark {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --card: #1e1e1e;
+  --primary: #64b5f6;
+  --primary-dark: #42a5f5;
+}
+:root {
+  --bg: #f0f4f8;
+  --text: #333;
+  --card: white;
+  --primary: #2196f3;
+  --primary-dark: #1976d2;
+}
+.container {
+  background: #d2dff2;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 10 10 15px rgba(165, 118, 204, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  color: var(--text);
+  transition: background 0.4s, color 0.4s;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  padding: 10px;
+  width: 200px;
+  margin-right: 10px;
+  max-width: 300px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color:var(--primary) ;
+  color:aliceblue;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+.output {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.output.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.forecast-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.forecast-card img {
+  width: 48px;
+  height: 48px;
+}
+
+@media (min-width: 600px) {
+  .forecast {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .forecast-card {
+    flex: 1;
+    margin: 0 5px;
+  }
+}
+
+@media (min-width: 600px) {
+  form {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  input {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}

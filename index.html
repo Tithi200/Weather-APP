@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Weather</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1><img src="imoji.svg" alt="Emoji" style="height:1em;vertical-align:middle;margin-right:8px;">Check Weather</h1>
+    <form id="weatherForm">
+      <input type="text" id="locationInput" placeholder="Enter location" required />
+      <button type="submit">Get Temperature</button>
+    </form>
+    <div id="output" class="output"></div>
+     <button id="geoButton">Use My Location</button>
+    <button id="toggleDark">Toggle Dark Mode</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
